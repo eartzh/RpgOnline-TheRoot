@@ -1,1 +1,12 @@
-
+#body{
+    background-color: black;
+}
+#form{
+    height: 800px;
+    width: 800px;
+    border: solid white 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
