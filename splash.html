@@ -2,82 +2,49 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>12099鳳小新-JS射擊遊戲</title>
-	<style>
-		#timebar {
-			width:500px;
-			height:10px;
-			background: green;
-		}
-		#board {
-			width:500px;
-			height:500px;
-			border:10px solid black;
-			margin:5px;
-			position: relative;
-		}
-		.target {
-			position: absolute;
-			width: 50px;
-			height: 50px;
-			background-color: blue;
-			border-radius: 100%;
-		}
-	</style>
 	<script>
-		var gaming=false,score,t1,t2,sec
-		function get(id){
-			return document.getElementById(id);
-		}
-		function Rnd(min,max){
-            return Math.floor(Math.random()*(max-min+1)+min)
-        }
-		function newTarget() {
-			node=document.createElement("div")
-			node.className="target"
-			/*style start*/
-			var size=Rnd(20,70)
-			node.style.height=size + "px"
-			node.style.width=size + "px"
-			node.style.top=Rnd(0,500-size) + "px"
-			node.style.left=Rnd(0,500-size) + "px"
-			node.style.backgroundColor= "hsl("+Rnd(0,360)+",40%,50%)"
-			/*style end*/
-			node.addEventListener("click",shoot)
-			get("board").appendChild(node)
-		}
-		function shoot(ev) {
-			ev.target.remove()
-			score+=1
-			get("score").innerHTML=score;
-		}
-		function gameStart() {
-			if(gaming) return
-			sec=50*100
-			score=0
-			gaming=true
-			get("score").innerHTML=0;
-			t1=setInterval(newTarget,500)
-			t2=setInterval(game,10)
-		}
-		function game() {
-			sec-=1
-			get("timebar").style.width=(sec/10) + "px"
-			if(sec<=0) {
-				clearInterval(t1)
-				clearInterval(t2)
-				gaming=false
-				alert("Your Score is " + score)
-				location.reload()
-			}
+		function splash(){
+			setTimeout(function(){get("splash1").style.visibility="visible";},100)
+			setTimeout(function(){get("splash1").style.visibility="hidden";},5000)
 		}
 	</script>
+	<style>
+		@keyframes splash1{
+			0% {opacity: 0;}
+  			50% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+		@keyframes splash2{
+			0% {opacity: 0;}
+  			50% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+		@keyframes splash3{
+			0% {opacity: 0;}
+  			50% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+		.imgs{
+			width: 790px;
+			height: 780px;
+			position: absolute;
+		}
+		#splash1{
+			animation: splash1 5s linear 0s;
+		}
+		#splash2{
+			visibility: hidden;
+			animation: splash2 10s linear 5s;
+		}
+		#splash3{
+			visibility: hidden;
+			animation: splash1 5s linear 10s;
+		}
+	</style>
 </head>
-<body>
-	<div id="timebar"></div>
-	<div>分數：<span id="score">0</span></div>
-	<div id="board"></div>
-	<button onclick="gameStart();">開始</button>
+<body onload="splash()">
+	<img class="imgs" id="splash1" src="resource/splash1.png">
+	<img class="imgs" id="splash2" src="resource/splash2.png">
+	<img class="imgs" id="splash3" src="resource/splash3.png">
 </body>
 </html>
