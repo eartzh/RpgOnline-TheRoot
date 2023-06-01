@@ -2,49 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<script>
-		function splash(){
-			setTimeout(function(){get("splash1").style.visibility="visible";},100)
-			setTimeout(function(){get("splash1").style.visibility="hidden";},5000)
-		}
-	</script>
-	<style>
-		@keyframes splash1{
-			0% {opacity: 0;}
-  			50% {opacity: 1;}
-			100% {opacity: 0;}
-		}
-		@keyframes splash2{
-			0% {opacity: 0;}
-  			50% {opacity: 1;}
-			100% {opacity: 0;}
-		}
-		@keyframes splash3{
-			0% {opacity: 0;}
-  			50% {opacity: 1;}
-			100% {opacity: 0;}
-		}
-		.imgs{
-			width: 790px;
-			height: 780px;
-			position: absolute;
-		}
-		#splash1{
-			animation: splash1 5s linear 0s;
-		}
-		#splash2{
-			visibility: hidden;
-			animation: splash2 10s linear 5s;
-		}
-		#splash3{
-			visibility: hidden;
-			animation: splash1 5s linear 10s;
-		}
-	</style>
+	<script type="text/javascript" src="script/env.js"></script>
+	<script type="text/javascript" src="script/splash.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/splash.css">
 </head>
-<body onload="splash()">
-	<img class="imgs" id="splash1" src="resource/splash1.png">
-	<img class="imgs" id="splash2" src="resource/splash2.png">
-	<img class="imgs" id="splash3" src="resource/splash3.png">
+<body onload="splashAni()">
+	<img class="imgs" id="splash1" src="resource/splash1.jpg">
 </body>
 </html>
