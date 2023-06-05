@@ -1,0 +1,15 @@
+#label{
+    color:white ;
+    font-size: 100px;
+    position: absolute;
+    left:350px;
+    top:100px;
+}
+.button{
+    border: solid white 5px;
+    border-radius: 1px;
+    width: 200px;
+    position: absolute;
+    left: 300px;
+    text-align:center
+}
