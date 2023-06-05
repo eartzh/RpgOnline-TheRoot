@@ -2,6 +2,7 @@
 <html>
     <head>
         <script type="text/javascript" src="script/scene1.js"></script>
+        <script type="text/javascript" src="script/env.js"></script>
         <link rel="stylesheet" type="text/css" href="style/scene1.css">
     </head>
     <body>
@@ -9,8 +10,9 @@
         <p id="text"></p>    
         <script>        
             var i=0;
-            var str=" 東吉嶼，是一座位於澎湖南方四島國家公園中的小島。隨著設立國家公園以及觀光客的增加，基礎建設雖然比不上澎湖本島，但仍進步了許多。";
-            window.onload=typing();
+            var script=[' 東吉嶼，是一座位於澎湖南方四島國家公園中的小島。','隨著設立國家公園以及觀光客的增加，基礎建設雖然比不上澎湖本島，但仍進步了許多。',' 0'];
+            var str=script[0];
+            window.onload=onType(2);
         </script>
         </div>
     </body>
