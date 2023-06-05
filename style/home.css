@@ -5,6 +5,16 @@
     left:350px;
     top:100px;
 }
+#home{
+    height: 790px;
+    width: 790px;
+    margin: 0px;
+    border: 0px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
 .button{
     border: solid white 5px;
     border-radius: 1px;
