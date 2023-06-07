@@ -14,6 +14,10 @@
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
+    animation: onLoad 2s linear
+}
+#home.offLoad{
+    animation: offLoad 2s linear
 }
 .button{
     border: solid white 5px;
@@ -22,4 +26,12 @@
     position: absolute;
     left: 300px;
     text-align:center
+}
+@keyframes onLoad{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes offLoad{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 }
