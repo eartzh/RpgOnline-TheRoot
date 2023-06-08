@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="script/env.js"></script>
+        <link rel="stylesheet" type="text/css" href="style/env.css">
+        <style>
+            .body{
+                height: 1000px;
+                width: 790px;
+                overflow: hidden;
+            }
+            #road{
+                height: 1000px;
+                width: 100px;
+                left: 350px;
+                top: 0px;
+                border: solid white 10px;
+                position: absolute;
+                visibility: visible;
+            }
+            #sea{
+                height: 300px;
+                width: 800px;
+                position: absolute;
+                top: 900px;
+                background-color: blue;
+            }
+            .hint{
+                font-size: 80px;
+                color: white;
+            }
+            #hint1{
+                position: absolute;
+                left: 25px;
+                top: 75px;
+            }
+        </style>
+    </head>
+    <body class="body">
+        <div class="hint" id="hint1">使用<br>W,A,S,D<br>以移動</div>
+        <div id="road"></div>
+        <div id="sea"></div>
+    </body>
+</html>

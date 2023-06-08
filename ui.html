@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="script/env.js"></script>
+        <link rel="stylesheet" type="text/css" href="style/env.css">
+        <script type="text/javascript" src="script/ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="style/ui.css">
+        <script>
+            var char={x:0,y:400},key={"w":0,"a":0,"s":0,"d":0},border={yMax:25565,yMin:25565,xMax:25565,xMin:25565}
+            var map="",status=0
+            function init(){
+                get("body").focus();
+                if(status==0){
+                    tutorial()
+                }
+                function tutorial(){
+                    border.xMax=45
+                    border.xMin=-35
+                    border.yMax=425
+                    border.yMin=-300
+                    map="tutorial"
+                    get("box").innerHTML="接受任務：前往碼頭"
+                    get("box").classList.add('box');
+                    get("tutorial").style.visibility="visible"
+                }
+            }
+        </script>
+    </head>
+    <body class="body" id="body" tabindex="0" onload="init()" onkeydown="move(event)" onkeyup="">
+        <div id="box" class="font"></div>
+        <div id="innerBody">
+            <object type="text/html" data="tutorial.html" width="800px" height="1600px" id="tutorial" style="visibility: hidden;"></object>
+        </div>
+        <div id="char"></div>
+    </body>
+</html>

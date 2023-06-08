@@ -1,5 +1,3 @@
-var elem = document.getElementById("main");
-
 function get(id) {
     return document.getElementById(id);
 }
