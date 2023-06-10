@@ -7,7 +7,7 @@
         <script type="text/javascript" src="script/ui.js"></script>
         <link rel="stylesheet" type="text/css" href="style/ui.css">
         <script>
-            var char={x:0,y:400},key={"w":0,"a":0,"s":0,"d":0},border={yMax:25565,yMin:25565,xMax:25565,xMin:25565}
+            var char={x:0,y:400},key={"w":0,"a":0,"s":0,"d":0},border={yMax:25565,yMin:-25565,xMax:25565,xMin:-25565}
             var map="",status=0
             function init(){
                 get("body").focus();
@@ -21,6 +21,7 @@
         <div id="box" class="font"></div>
         <div id="innerBody">
             <object type="text/html" data="tutorial.html" width="800px" height="1600px" id="tutorial" style="visibility: hidden;"></object>
+            <img src="resource/djland.png" id="djland" style="visibility: hidden;position: absolute;">
         </div>
         <div id="char"></div>
     </body>
