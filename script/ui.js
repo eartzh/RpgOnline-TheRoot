@@ -8,13 +8,22 @@ function move(ev){
     }
     if(ev.key=="s"&&char.y>border.yMin){
         char.y-=5
-        if(char.y<=-300&&map=="tutorial"){   /* plugin for tutorial */
-            scene2()
-        }
     }
     if(ev.key=="d"&&char.x>border.xMin){
         char.x-=5
     }
+    //plugins
+    if(map=="tutorial"){
+        if(char.y<=-300){   /**  plugin for tutorial **/
+            scene2()
+        }
+    }
+    if(map=="djland"){
+       if(char.x<-95&&char.x>-270&&char.y>255&&char.y<350){
+            console.log("event1")
+       } 
+    }
+    //plugins end
     console.log(char.x,char.y)
     get(map).style.left=char.x + "px"
     get(map).style.top=char.y + "px"
@@ -23,7 +32,10 @@ function scene2(){
     map="djland"
     console.log("[debug]Enter map1")
     get("tutorial").style.visibility="hidden"
-    get("djland").style.visibility="visible"
+    get("char").style.visibility="hidden"
+    get("font").innerHTML="第一章：回家"
+    get("font").classList.add('fontani');
+    setTimeout(function(){get("djland").style.visibility="visible";get("char").style.visibility="visible"},2900)
     border.xMax=295
     border.xMin=-800
     border.yMax=350

@@ -27,11 +27,3 @@
     left: 300px;
     text-align:center
 }
-@keyframes onLoad{
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-@keyframes offLoad{
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
