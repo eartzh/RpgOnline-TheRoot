@@ -21,16 +21,34 @@ function move(ev){
     if(map=="djland"){
        if(char.x<-95&&char.x>-270&&char.y>255&&char.y<350){
             console.log("event1")
-       } 
+       }
+       if(char.y<110&&char.y>35&&char.x<-700&&scene3status==0) {
+            scene3status=1
+            console.log("[debug]scene3")
+            scene3()
+       }
     }
     //plugins end
     console.log(char.x,char.y)
     get(map).style.left=char.x + "px"
     get(map).style.top=char.y + "px"
 }
+function scene3(){
+    /* Work in progress */
+    console.log("[debug]Enter map2")
+    get("box").classList.remove('box');
+    get("font").classList.remove('fontani');
+    get("djland").style.visibility="hidden"
+    get("char").style.visibility="hidden"
+    get("font").innerHTML="第二章：往事"
+    get("font").classList.add('fontani');
+    get("WIP").style.visibility="visible"
+}
 function scene2(){
     map="djland"
     console.log("[debug]Enter map1")
+    get("box").classList.remove('box');
+    get("font").classList.remove('fontani');
     get("tutorial").style.visibility="hidden"
     get("char").style.visibility="hidden"
     get("font").innerHTML="第一章：回家"
