@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="script/env.js"></script>
+        <link rel="stylesheet" type="text/css" href="style/env.css">
+        <link rel="stylesheet" type="text/css" href="style/puzzle.css">
+        <link rel="stylesheet" type="text/css" href="style/ui.css">
+    </head>
+    <body class="body">
+        <div id="tutorial1" class="font">請在各個欄位中鍵入1~9中的其中一數以解鎖箱子</div>
+        <div id="ans" class="square1 font"><input type="number" min="1" max="9" id="a"></div>
+        <div id="ans" class="square2 font"><input type="number" min="1" max="9" id="b"></div>
+        <div id="ans" class="square3 font"><input type="number" min="1" max="9" id="c"></div>
+        <button id="button" onclick="guess()">解鎖</button>
+    </body>
+</html>

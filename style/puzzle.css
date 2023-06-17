@@ -1,0 +1,31 @@
+#tutorial1{
+    top:100px;
+    left:100px;
+    position:sticky;
+}
+#ans{
+    height:50px;
+    width:60px;
+    border:solid white 5px;
+    position: absolute;
+}
+.square1{
+    left:50%;
+    top:50%;
+    transform:translateX(-200%) translateY(-50%);
+}
+.square2{
+    left:50%;
+    top:50%;
+    transform:translateX(-50%) translateY(-50%);
+}
+.square3{
+    left:50%;
+    top:50%;
+    transform:translateX(100%) translateY(-50%);
+}
+#button{
+    left:50%;
+    top:50%;
+    transform:translateX(50%) translateY(-50%);
+}
