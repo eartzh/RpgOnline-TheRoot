@@ -63,6 +63,7 @@
     width: 500px;
     height: 100px;
     border: solid white 10px;
+    background-color: black;
     border-radius: 5px;
     position: absolute;
     top: -120px;
