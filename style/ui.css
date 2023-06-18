@@ -44,6 +44,18 @@
     border-radius: 5px;
     background-color: black;
 }
+#text{
+    position: absolute;
+    left: 20px;
+    top: 80px;
+    font-size: x-large;
+    visibility: visible;
+    color: white;
+}
+#textbox{
+    width: 500px;
+    height: 200px;
+}
 .fontani{
     animation: font 3s ease-in-out;
 }
@@ -62,6 +74,67 @@
 .offLoad{
     animation: offLoad 2s linear;
 }
+#puzzle0{
+    width: 500px;
+    height: 100px;
+    background-color: black;
+}
+/*from puzzle0.css*/
+    #caption{
+        left:100px;
+        position:sticky;
+    }
+    #ans1{
+        height:50px;
+        width:60px;
+        border:solid white 5px;
+        position:absolute;
+        left:230px;
+        top:50%;
+        transform:translateY(-50%);
+    }
+    #ans2{
+        height:50px;
+        width:60px;
+        border:solid white 5px;
+        position:absolute;
+        left: 330px;
+        top:50%;
+        transform:translateY(-50%);
+    }
+    #ans3{
+        height:50px;
+        width:60px;
+        border:solid white 5px;
+        position:absolute;
+        left:430px;
+        top:50%;
+        transform:translateY(-50%);
+    }
+    #button{
+        left:330px;
+        top:50%;
+        position:absolute;
+        transform:translateY(200%);
+    }
+    #unlock{
+        left:330px;
+        top:50%;
+        position:absolute;
+        transform:translateY(200%);
+    }
+    .input{
+        background-color: black;
+        color: white;
+        font-size: 23px;
+        border: 0px;
+        padding: 1px;
+        line-height: 40px;
+        position: absolute;
+        top: 4px;
+        text-align: center;
+    }
+/*from puzzle0.css end*/ 
 @keyframes box{
     0%{top: -120px;visibility: visible;}
     30%{top: 10px;visibility: visible;}

@@ -14,6 +14,14 @@ function typing(){
 }
 function onType(times){
     t=0;
+    //firstTime
+        i=0;
+        document.getElementById("text").innerHTML=""
+        str=script[t]
+        console.log("[debug]printScript:"+t)
+        typing()
+        t=t+1
+    //firstTime end
     t1=setInterval(function(){
         i=0;
         document.getElementById("text").innerHTML=""

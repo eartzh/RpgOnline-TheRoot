@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="style/ui.css">
         <script>
             var char={x:0,y:400},key={"w":0,"a":0,"s":0,"d":0},border={yMax:25565,yMin:-25565,xMax:25565,xMin:-25565}
-            var map="",status=0,scene3status=0
+            var map="",status=0,scene3status=0,dirtpic=0,ring=0,cooldown=0,deadnote=0,puzzle0status=0
             function init(){
                 get("body").focus();
                 if(status==0){
@@ -26,6 +26,13 @@
             <img src="resource/WIP.png" id="WIP" style="visibility: hidden;position: absolute;">
         </div>
         <div id="char"></div>
-        <div id="dialog"><div id="text"></div></div>
+        <div id="dialog"><div id="textbox"><div id="text"></div><div id="puzzle0" style="visibility: hidden;">
+            <div id="caption" style="visibility: hidden;color: white;">在各個欄位中放入1~9中的其中一數以解鎖箱子<br>紅色=數字太大!<br>黃色=數字太小!<br>綠色=正解!</div>
+            <div id="ans1"><input type="number" min="1" max="9" id="a" class="input"></div>
+            <div id="ans2"><input type="number" min="1" max="9" id="b" class="input"></div>
+            <div id="ans3"><input type="number" min="1" max="9" id="c" class="input"></div>
+            <button id="button" onclick="guess();">解鎖</button>
+            <div id="unlock" class="font" style="visibility:hidden">成功解鎖</div>
+        </div></div></div>
     </body>
 </html>

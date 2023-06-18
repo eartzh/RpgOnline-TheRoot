@@ -31,5 +31,6 @@ function guess(){
     if(a==aans && b==bans && c==cans){
         get("button").style.visibility="hidden"
         get("unlock").style.visibility="visible"
+        deadnote=1
     }    
 }
