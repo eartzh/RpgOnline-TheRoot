@@ -10,9 +10,9 @@
     </head>
     <body class="body" onload="Rndnum();">
         <div id="caption" class="font">在各個欄位中放入1~9中的其中一數以解鎖箱子<br>紅色=數字太大!<br>黃色=數字太小!<br>綠色=正解!</div>
-        <div id="ans1" class="font"><input type="number" min="1" max="9" id="a"></div>
-        <div id="ans2" class="font"><input type="number" min="1" max="9" id="b"></div>
-        <div id="ans3" class="font"><input type="number" min="1" max="9" id="c"></div>
+        <div id="ans1"><input type="number" min="1" max="9" id="a" class="input"></div>
+        <div id="ans2"><input type="number" min="1" max="9" id="b" class="input"></div>
+        <div id="ans3"><input type="number" min="1" max="9" id="c" class="input"></div>
         <button id="button" onclick="guess();">解鎖</button>
         <div id="unlock" class="font" style="visibility:hidden">成功解鎖</div>
     </body>

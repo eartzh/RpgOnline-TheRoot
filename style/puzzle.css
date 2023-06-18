@@ -42,3 +42,14 @@
     position:absolute;
     transform:translateX(-50%) translateY(200%);
 }
+.input{
+    background-color: black;
+    color: white;
+    font-size: 23px;
+    border: 0px;
+    padding: 1px;
+    line-height: 40px;
+    position: absolute;
+    top: 4px;
+    text-align: center;
+}
