@@ -1,25 +1,31 @@
-#tutorial1{
+#caption{
     top:100px;
     left:100px;
     position:sticky;
 }
-#ans{
+#ans1{
     height:50px;
     width:60px;
     border:solid white 5px;
-    position: absolute;
-}
-.square1{
+    position:absolute;
     left:50%;
     top:50%;
     transform:translateX(-200%) translateY(-50%);
 }
-.square2{
+#ans2{
+    height:50px;
+    width:60px;
+    border:solid white 5px;
+    position:absolute;
     left:50%;
     top:50%;
     transform:translateX(-50%) translateY(-50%);
 }
-.square3{
+#ans3{
+    height:50px;
+    width:60px;
+    border:solid white 5px;
+    position:absolute;
     left:50%;
     top:50%;
     transform:translateX(100%) translateY(-50%);
@@ -27,5 +33,12 @@
 #button{
     left:50%;
     top:50%;
-    transform:translateX(50%) translateY(-50%);
+    position:absolute;
+    transform:translateX(-50%) translateY(200%);
+}
+#unlock{
+    left:50%;
+    top:50%;
+    position:absolute;
+    transform:translateX(-50%) translateY(200%);
 }
