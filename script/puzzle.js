@@ -1,40 +1,34 @@
-function getRnd(min,max) {
-    return Math.floor(Math.random()*(max-min+1))+min;
-}
-function get(id) {
-    return document.getElementById(id);
-}
 function Rndnum(){
-    a.ans=getRnd(1,9);
-    b.ans=getRnd(1,9);
-    c.ans=getRnd(1,9);
+    aans=getRnd(1,9);
+    bans=getRnd(1,9);
+    cans=getRnd(1,9);
 }
 function guess(){
-    a = parseInt(get("a").value);
-    b = parseInt(get("b").value);
-    c = parseInt(get("c").value);
-    if(a>a.ans){
+    var a = parseInt(get("a").value,10);
+    var b = parseInt(get("b").value,10);
+    var c = parseInt(get("c").value,10);
+    if(a>aans){
         get("ans1").style.borderColor="red";
-    }else if(a<a.ans){
+    }else if(a<aans){
         get("ans1").style.borderColor="yellow";
-    }else if(a=a.ans){
+    }else if(a==aans){
         get("ans1").style.borderColor="green";
     }
-    if(b>b.ans){
+    if(b>bans){
         get("ans2").style.borderColor="red";
-    }else if(b<b.ans){
+    }else if(b<bans){
         get("ans2").style.borderColor="yellow";
-    }else if(b=b.ans){
+    }else if(b==bans){
         get("ans2").style.borderColor="green";
     }
-    if(c>c.ans){
+    if(c>cans){
         get("ans3").style.borderColor="red";
-    }else if(c<c.ans){
+    }else if(c<cans){
         get("ans3").style.borderColor="yellow";
-    }else if(c=c.ans){
+    }else if(c==cans){
         get("ans3").style.borderColor="green";
     }
-    if(a=="a.ans" && b=="b.ans" && c=="c.ans"){
+    if(a==aans && b==bans && c==cans){
         get("button").style.visibility="hidden"
         get("unlock").style.visibility="visible"
     }    
