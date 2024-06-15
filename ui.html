@@ -11,6 +11,7 @@
             var map="",status=0,scene3status=0,dirtpic=0,ring=0,cooldown=0,deadnote=0,puzzle0status=0
             function init(){
                 get("body").focus();
+                try{status = valueHandler();}catch{}
                 if(status==0){
                     tutorial()
                 }

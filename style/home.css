@@ -1,9 +1,9 @@
 #label{
-    color:white ;
     font-size: 100px;
-    position: absolute;
-    left:350px;
-    top:100px;
+    color:white;
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
 }
 #home{
     height: 790px;
@@ -26,4 +26,25 @@
     position: absolute;
     left: 300px;
     text-align:center
+}
+#chapterFrame{
+    visibility: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 50px;
+    justify-content: center;
+}
+.chapters{
+    border: solid white 5px;
+    border-radius: 2px;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
 }

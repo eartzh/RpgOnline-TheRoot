@@ -7,13 +7,22 @@
         <link rel="stylesheet" type="text/css" href="style/env.css">
         <link rel="stylesheet" type="text/css" href="style/home.css">
         <script>
-
         </script>
     </head>
     <body id="home" class="body">
         <div id="label">根</div>
         <div class="button font" style="bottom: 340px;" onclick="gameStart()">開始新遊戲</div>
-        <div class="button font" style="bottom: 270px;" onclick="tutorial()">章節選擇</div>
+        <div class="button font" style="bottom: 270px;" onclick="chapterSelect()">章節選擇</div>
         <div class="button font" style="bottom: 200px;">設定</div>
+
+        <!--chapterSelect-->
+        <div id="chapterFrame">
+            <span class="chapters" onclick="chapterSelected(2)"><img src="resource/djland.png"></span>
+            <span class="chapters"></span>
+            <span class="chapters"></span>
+            <span class="chapters"></span>
+        </div>
+        <!--chapterSelect End-->
+
     </body>
 </html>

@@ -133,6 +133,21 @@ function guess(){
 }
 //from puzzle0.js end
 
+const valueHandler = () => {
+    let value=location.href.split('=')[1].split('&');
+    sceneSelector(value[0])
+    if(value) return 1;
+}
+
+const sceneSelector = (scene) => {
+    if (scene == 2 || scene == 'djland'){
+        scene2()
+    }
+    if (scene == 3){
+        scene3()
+    }
+}
+
 function scene3(){
     /* Work in progress */
     console.log("[debug]Enter map2")
