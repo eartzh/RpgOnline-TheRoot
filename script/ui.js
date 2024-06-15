@@ -1,44 +1,4 @@
-function move(ev){
-    ev.preventDefault();
-    if(ev.key=="w"&&char.y<border.yMax){
-        char.y+=5
-    }
-    if(ev.key=="a"&&char.x<border.xMax){
-        char.x+=5
-    }
-    if(ev.key=="s"&&char.y>border.yMin){
-        char.y-=5
-    }
-    if(ev.key=="d"&&char.x>border.xMin){
-        char.x-=5
-    }
-
-    //plugins
-    if(map=="tutorial"){
-        if(char.y<=-300){   /**  plugin for tutorial **/
-            scene2()
-        }
-    }
-    if(map=="djland"){
-       if(char.x<-95&&char.x>-270&&char.y>255&&char.y<350){
-            events("djland","dirtpic")
-       }
-       if(char.x<-415&&char.x>-525&&char.y>155&&char.y<210){
-            events("djland","ring")
-       }
-       if(char.x<-80&&char.x>-200&&char.y<-90){
-        events("djland","deadnote")
-   }
-       if(char.y<110&&char.y>35&&char.x<-700) {
-            events("djland","scene3")
-       }
-    }
-    //plugins end
-
-    console.log(char.x,char.y)
-    get(map).style.left=char.x + "px"
-    get(map).style.top=char.y + "px"
-}
+//map events
 function events(map,ev){
     if(map=="djland"){
         if(ev=="dirtpic"&&dirtpic==0){
@@ -131,36 +91,18 @@ function guess(){
         setTimeout(function(){get("box").classList.remove('box');get("puzzle0").style.visibility="hidden";get("caption").style.visibility="hidden";get("ans1").style.visibility="hidden";get("ans2").style.visibility="hidden";get("ans3").style.visibility="hidden";get("unlock").style.visibility="hidden";get("dialog").style.visibility="hidden";},3000)
     }    
 }
-//from puzzle0.js end
 
-const valueHandler = () => {
-    let value=location.href.split('=')[1].split('&');
-    sceneSelector(value[0])
-    if(value) return 1;
-}
-
-const sceneSelector = (scene) => {
-    if (scene == 2 || scene == 'djland'){
-        scene2()
-    }
-    if (scene == 3){
-        scene3()
-    }
-}
-
-function scene3(){
-    /* Work in progress */
-    console.log("[debug]Enter map2")
+//map initialization
+function tutorial(){
     get("box").classList.remove('box');
-    get("djland").style.visibility="hidden"
-    get("char").style.visibility="hidden"
-    get("font").innerHTML="第二章：往事"
-    get("font").classList.add('fontani');
-    setTimeout(function(){
-        get("WIP").style.visibility="visible";
-        get("char").style.visibility="visible";
-        get("font").classList.remove('fontani');
-    },2900)
+    border.xMax=50
+    border.xMin=-40
+    border.yMax=430
+    border.yMin=-305
+    map="tutorial"
+    get("box").innerHTML="接受任務：前往碼頭"
+    get("box").classList.add('box');
+    get("tutorial").style.visibility="visible"
 }
 function scene2(){
     map="djland"
@@ -185,14 +127,71 @@ function scene2(){
     border.yMax=350
     border.yMin=-165
 }
-function tutorial(){
+function scene3(){
+    /* Work in progress */
+    console.log("[debug]Enter map2")
     get("box").classList.remove('box');
-    border.xMax=50
-    border.xMin=-40
-    border.yMax=430
-    border.yMin=-305
-    map="tutorial"
-    get("box").innerHTML="接受任務：前往碼頭"
-    get("box").classList.add('box');
-    get("tutorial").style.visibility="visible"
+    get("djland").style.visibility="hidden"
+    get("char").style.visibility="hidden"
+    get("font").innerHTML="第二章：往事"
+    get("font").classList.add('fontani');
+    setTimeout(function(){
+        get("WIP").style.visibility="visible";
+        get("char").style.visibility="visible";
+        get("font").classList.remove('fontani');
+    },2900)
+}
+
+//basicfunction
+function move(ev){
+    ev.preventDefault();
+    if(ev.key=="w"&&char.y<border.yMax){
+        char.y+=5
+    }
+    if(ev.key=="a"&&char.x<border.xMax){
+        char.x+=5
+    }
+    if(ev.key=="s"&&char.y>border.yMin){
+        char.y-=5
+    }
+    if(ev.key=="d"&&char.x>border.xMin){
+        char.x-=5
+    }
+    console.log(char.x,char.y)
+    get(map).style.left=char.x + "px"
+    get(map).style.top=char.y + "px"
+
+    //listener
+    if(map=="tutorial"){
+        if(char.y<=-300){
+            scene2()
+        }
+    }
+    if(map=="djland"){
+       if(char.x<-95&&char.x>-270&&char.y>255&&char.y<350){
+            events("djland","dirtpic")
+       }
+       if(char.x<-415&&char.x>-525&&char.y>155&&char.y<210){
+            events("djland","ring")
+       }
+       if(char.x<-80&&char.x>-200&&char.y<-90){
+            events("djland","deadnote")
+        }
+       if(char.y<110&&char.y>35&&char.x<-700) {
+            events("djland","scene3")
+       }
+    }
+}
+const valueHandler = () => {
+    let value=location.href.split('=')[1].split('&');
+    sceneSelector(value[0])
+    if(value) return 1;
+}
+const sceneSelector = (scene) => {
+    if (scene == 2 || scene == 'djland'){
+        scene2()
+    }
+    if (scene == 3){
+        scene3()
+    }
 }

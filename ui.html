@@ -19,21 +19,37 @@
         </script>
     </head>
     <body class="body" id="body" tabindex="0" onload="init()" onkeydown="move(event)" onkeyup="">
+        <!--chapter label-->
         <div id="font" class="font"></div>
+        
+        <!--maps-->
         <div id="innerBody">
             <object type="text/html" data="tutorial.html" width="800px" height="1600px" id="tutorial" style="visibility: hidden;"></object>
             <img src="resource/djland.png" id="djland" style="visibility: hidden;position: absolute;">
             <img src="resource/WIP.png" id="WIP" style="visibility: hidden;position: absolute;">
         </div>
+
+        <!--character-->
         <div id="char"></div>
-        <div id="dialog"><div id="textbox"><div id="text"></div><div id="puzzle0" style="visibility: hidden;">
-            <div id="caption" style="visibility: hidden;color: white;">在各個欄位中放入1~9中的其中一數以解鎖箱子<br>紅色=數字太大!<br>黃色=數字太小!<br>綠色=正解!</div>
-            <div id="ans1"><input type="number" min="1" max="9" id="a" class="input"></div>
-            <div id="ans2"><input type="number" min="1" max="9" id="b" class="input"></div>
-            <div id="ans3"><input type="number" min="1" max="9" id="c" class="input"></div>
-            <button id="button" onclick="guess();">解鎖</button>
-            <div id="unlock" class="font" style="visibility:hidden">成功解鎖</div>
-        </div></div></div>
+
+        <!--dialog(bottom)-->
+        <div id="dialog">
+            <div id="textbox">
+                <div id="text"></div>
+                
+                <!--from puzzle0.html-->
+                <div id="puzzle0" style="visibility: hidden;">
+                    <div id="caption" style="visibility: hidden;color: white;">在各個欄位中放入1~9中的其中一數以解鎖箱子<br>紅色=數字太大!<br>黃色=數字太小!<br>綠色=正解!</div>
+                    <div id="ans1"><input type="number" min="1" max="9" id="a" class="input"></div>
+                    <div id="ans2"><input type="number" min="1" max="9" id="b" class="input"></div>
+                    <div id="ans3"><input type="number" min="1" max="9" id="c" class="input"></div>
+                    <button id="button" onclick="guess();">解鎖</button>
+                    <div id="unlock" class="font" style="visibility:hidden">成功解鎖</div>
+                </div>
+            </div>
+        </div>
+
+        <!--notification(top)-->
         <div id="box" class="font"></div>
     </body>
 </html>
